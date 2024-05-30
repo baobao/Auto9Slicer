@@ -14,6 +14,7 @@ namespace Auto9Slicer
 
         public bool CreateBackup => createBackup;
         [SerializeField] private bool createBackup = true;
+        [SerializeField] private string _allowKeyword;
 
         public void Run()
         {
@@ -23,6 +24,16 @@ namespace Auto9Slicer
             var fullDirectoryPath = Path.Combine(Path.GetDirectoryName(Application.dataPath) ?? "", directoryPath);
             var targets = Directory.GetFiles(fullDirectoryPath)
                 .Select(Path.GetFileName)
+                .Where(x =>
+                {
+                    if (string.IsNullOrEmpty(_allowKeyword))
+                    {
+                        return x.EndsWith(".png") || x.EndsWith(".jpg") || x.EndsWith(".jpeg");
+                    }
+
+                    return x.EndsWith($"{_allowKeyword}.png") || x.EndsWith($"{_allowKeyword}.jpg") ||
+                           x.EndsWith($"{_allowKeyword}.jpeg");
+                })
                 .Where(x => x.EndsWith(".png") || x.EndsWith(".jpg") || x.EndsWith(".jpeg"))
                 .Where(x => !x.Contains(".original"))
                 .Select(x => Path.Combine(directoryPath, x))
