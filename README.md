@@ -1,10 +1,21 @@
 # Auto9Slicer
+
 Auto 9 slice sprite generator on Unity.  
 (The library used to be called [`OnionRing`](https://github.com/kyubuns/Auto9Slicer/tree/onionring))
 
 <a href="https://www.buymeacoffee.com/kyubuns" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ![output](https://user-images.githubusercontent.com/961165/106372768-5c612480-63b6-11eb-9ff8-04394f6bb70b.gif)
+
+## Additional Features
+
+<img width="422" alt="image" src="https://github.com/baobao/Auto9Slicer/assets/144386/1d0ab5fd-e9b4-48a7-8999-5f891122dc08">
+
+feature | content 
+--- | --- 
+Allow Keyword | The keywords at the end of the file term are targeted for slicing. If not specified, all images will be sliced.<br />ex) _sl -> ○ hoge_sl.png × hoge.png 
+Is Again Slice | Slices an image that has already been Slice 
+
 
 ## Instructions
 
