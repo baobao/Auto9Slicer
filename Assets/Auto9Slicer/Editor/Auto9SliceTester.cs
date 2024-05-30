@@ -14,7 +14,7 @@ namespace Auto9Slicer
 
         public bool CreateBackup => createBackup;
         [SerializeField] private bool createBackup = true;
-        [SerializeField] private string _allowKeyword;
+        [SerializeField, Header("ファイル名の語尾キーワードでフィルタリング／無記載:全画像対象")] private string _allowKeyword;
 
         [SerializeField, Header("Slice済画像を対象にするフラグ")] private bool _isAgainSlice;
 
