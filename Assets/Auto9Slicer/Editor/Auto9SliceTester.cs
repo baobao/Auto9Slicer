@@ -16,6 +16,8 @@ namespace Auto9Slicer
         [SerializeField] private bool createBackup = true;
         [SerializeField] private string _allowKeyword;
 
+        [SerializeField, Header("Slice済画像を対象にするフラグ")] private bool _isAgainSlice;
+
         public void Run()
         {
             var directoryPath = Path.GetDirectoryName(AssetDatabase.GetAssetPath(this));
@@ -46,7 +48,7 @@ namespace Auto9Slicer
                 var importer = AssetImporter.GetAtPath(target.Path);
                 if (importer is TextureImporter textureImporter)
                 {
-                    if (textureImporter.spriteBorder != Vector4.zero) continue;
+                    if (textureImporter.spriteBorder != Vector4.zero && _isAgainSlice == false) continue;
                     var fullPath = Path.Combine(Path.GetDirectoryName(Application.dataPath) ?? "", target.Path);
                     var bytes = File.ReadAllBytes(fullPath);
 
