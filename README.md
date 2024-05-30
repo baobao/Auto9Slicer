@@ -11,6 +11,8 @@ Auto 9 slice sprite generator on Unity.
 
 <img width="422" alt="image" src="https://github.com/baobao/Auto9Slicer/assets/144386/1d0ab5fd-e9b4-48a7-8999-5f891122dc08">
 
+It is Auto9Slicer's Inspector.
+
 feature | content 
 --- | --- 
 Allow Keyword | The keywords at the end of the file term are targeted for slicing. If not specified, all images will be sliced.<br />ex) _sl -> ○ hoge_sl.png × hoge.png 
@@ -21,7 +23,7 @@ Is Again Slice | Slices an image that has already been Slice
 
 Please use Unity Package Manager(UPM).
 
-UPM : https://github.com/baobao/Auto9Slicer.git?path=Assets/Auto9Slicer
+UPM : `https://github.com/baobao/Auto9Slicer.git?path=Assets/Auto9Slicer`
 
 ![Screenshot 2024-05-31 at 8 12 48](https://github.com/baobao/Auto9Slicer/assets/144386/36fc13a0-8856-4f99-bec7-7888fe94d9cd)
 
